@@ -7,12 +7,15 @@
 
 import turtle
 import csv
+import random
 
 # user = input("Select turtle object/color: ")
 
 # setting up the turtle
 wn = turtle.Screen()
-wn.bgcolor("grey")
+# background change
+# wn.bgcolor("grey")
+# user gets to choose shapes
 # turtle.getshapes()
 
 # initiate turtle
@@ -22,14 +25,13 @@ user.goto(-350,350)
 user.shape("turtle")
 user.color("green")
 
+###############################################
+
 # coin flip game
 
-# create a die
-die = [1,2,3,4,5,6]
-
-game1 = input("True")
-if game1 == "True":
-    user.forward(180)
+# game1 = input("True")
+# if game1 == "True":
+#     user.forward(180)
 
 # how should the user interact with this screen
 # it should be intermediate inputs
