@@ -26,8 +26,6 @@ game1 = input("True")
 if game1 == "True":
     snake.forward(180)
 
-#kedie tryna commit*
-#Test 
 # # how should the user interact with this screen
 # # it should be intermediate inputs
 wn.exitonclick()
