@@ -8,15 +8,19 @@
 import turtle
 import csv
 
-user = input("Select turtle object/color: ")
+# user = input("Select turtle object/color: ")
 
 # setting up the turtle
 wn = turtle.Screen()
 wn.bgcolor("grey")
+# turtle.getshapes()
+
 snake = turtle.Turtle()
+snake.penup()
+snake.goto(-350,350)
 snake.shape("turtle")
 snake.color("green")
-snake.pensize(50)
 
-# how should the user interact with this screen
+# # how should the user interact with this screen
+# # it should be intermediate inputs
 wn.exitonclick()
