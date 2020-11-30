@@ -20,7 +20,7 @@ snake.penup()
 snake.goto(-350,350)
 snake.shape("turtle")
 snake.color("green")
-
+#kedie tryna commit*
 # # how should the user interact with this screen
 # # it should be intermediate inputs
 wn.exitonclick()
