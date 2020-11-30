@@ -21,6 +21,7 @@ snake.goto(-350,350)
 snake.shape("turtle")
 snake.color("green")
 
+# game 1 input and output
 game1 = input("True")
 if game1 == "True":
     snake.forward(180)
