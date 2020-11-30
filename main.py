@@ -7,20 +7,27 @@
 
 import turtle
 import csv
+<<<<<<< HEAD
 #Background image
 screen = turtle.Screen()
 screen.setup(900,600)
 screen.bgpic('boardgamegrid-01.png')
 screen.update()
 
+=======
+import random
+>>>>>>> 6e1934f63d3171a0a0e9ef290f96382a33bf7721
 
 # user = input("Select turtle object/color: ")
 
 # setting up the turtle
 wn = turtle.Screen()
-wn.bgcolor("grey")
+# background change
+# wn.bgcolor("grey")
+# user gets to choose shapes
 # turtle.getshapes()
 
+<<<<<<< HEAD
 snake = turtle.Turtle()
 snake.penup()
 snake.goto(-300,120)
@@ -36,4 +43,23 @@ if game1 == "True":
 #Test 
 # # how should the user interact with this screen
 # # it should be intermediate inputs
+=======
+# initiate turtle
+user = turtle.Turtle()
+user.penup()
+user.goto(-350,350)
+user.shape("turtle")
+user.color("green")
+
+###############################################
+
+# coin flip game
+
+# game1 = input("True")
+# if game1 == "True":
+#     user.forward(180)
+
+# how should the user interact with this screen
+# it should be intermediate inputs
+>>>>>>> 6e1934f63d3171a0a0e9ef290f96382a33bf7721
 wn.exitonclick()
