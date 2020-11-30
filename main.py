@@ -21,6 +21,10 @@ snake.goto(-350,350)
 snake.shape("turtle")
 snake.color("green")
 
+game1 = input("True")
+if game1 == "True":
+    snake.forward(180)
+
 # # how should the user interact with this screen
 # # it should be intermediate inputs
 wn.exitonclick()
