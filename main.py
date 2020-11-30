@@ -9,6 +9,12 @@ import turtle
 import csv
 import random
 
+#Background image
+screen = turtle.Screen()
+screen.setup(900,600)
+screen.bgpic('boardgamegrid-01.png')
+screen.update()
+
 # user = input("Select turtle object/color: ")
 
 # setting up the turtle
@@ -21,7 +27,7 @@ wn = turtle.Screen()
 # initiate turtle
 user = turtle.Turtle()
 user.penup()
-user.goto(-350,350)
+user.goto(-300,120)
 user.shape("turtle")
 user.color("green")
 
