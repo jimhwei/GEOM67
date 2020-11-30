@@ -18,6 +18,12 @@ screen.update()
 import random
 >>>>>>> 6e1934f63d3171a0a0e9ef290f96382a33bf7721
 
+#Background image
+screen = turtle.Screen()
+screen.setup(900,600)
+screen.bgpic('boardgamegrid-01.png')
+screen.update()
+
 # user = input("Select turtle object/color: ")
 
 # setting up the turtle
@@ -47,7 +53,7 @@ if game1 == "True":
 # initiate turtle
 user = turtle.Turtle()
 user.penup()
-user.goto(-350,350)
+user.goto(-300,120)
 user.shape("turtle")
 user.color("green")
 
@@ -61,5 +67,9 @@ user.color("green")
 
 # how should the user interact with this screen
 # it should be intermediate inputs
+<<<<<<< HEAD
 >>>>>>> 6e1934f63d3171a0a0e9ef290f96382a33bf7721
 wn.exitonclick()
+=======
+wn.exitonclick()
+>>>>>>> 183e80ea2f9aff17a201441d056be362ce156967
