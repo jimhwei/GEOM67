@@ -1,10 +1,5 @@
 import csv
 import random
-# tell it where the cvs file is....
-# f = open("SnakesQs.csv", "a")
-
-#open and read the file after the appending:
-# f = open("SnakesQs.csv", "r")
 
 with open('SnakesQs.csv') as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
