@@ -81,6 +81,7 @@ user.forward(250)
 user.right(2)
 user.shapesize(9,9,1)
 
+
 wn.exitonclick()
 
 
