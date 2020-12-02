@@ -26,6 +26,7 @@ with open('SnakesQs.csv') as csvfile:
         answers.append(answer)
 
     # random question selection
+    print("amount of rows:" + str(len(question)))
     nums = [1,2]
     q = random.choice(nums)
     print("This is Question:" + str(q))
