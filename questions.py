@@ -1,8 +1,14 @@
+# This program allows us to update questions using csv files
+
+# import the correct modules
 import csv
 import random
 
+# opening the csv file
 with open('SnakesQs.csv') as csvfile:
+    # the csv file reader uses comma as delimiter
     readCSV = csv.reader(csvfile, delimiter=',')
+    # generate blank lists to store the question variables
     question = []
     option1 = []
     option2 = []
@@ -10,14 +16,17 @@ with open('SnakesQs.csv') as csvfile:
     option4 = []
     answers = []
 
+    # loops into the csv to pull column variable into list
     for row in readCSV:
+        # column 0 in csv is the question, col 1 is choice A etc.
         questions = row[0]
         A = row[1]
         B = row[2]
         C = row[3]
         D = row[4]
         answer = row[5]
-
+        
+        # puts the variables back into the empty lists with append
         question.append(questions)
         option1.append(A)
         option2.append(B)
@@ -25,7 +34,8 @@ with open('SnakesQs.csv') as csvfile:
         option4.append(D)
         answers.append(answer)
 
-    # random question selection
+    # we don't want the same questions every game
+    # randomized to keep the game new
     print("amount of rows:" + str(len(question)))
     nums = [1,2]
     q = random.choice(nums)
@@ -41,7 +51,9 @@ with open('SnakesQs.csv') as csvfile:
     
     print("Please answer this question using letters A, B, C, D")
 
+    # Prompts user for input
     user_answer = input(">>")
+    # Conditionals based on success or failure
     if user_answer == answers[q]:
         print("You've got it!")
     else:
