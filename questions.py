@@ -69,5 +69,5 @@ def questions():
         
         return user_answer
 
-# calling function
-questions()
+# # calling function
+# questions()

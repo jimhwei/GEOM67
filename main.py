@@ -8,6 +8,7 @@
 import turtle
 import csv
 import random
+from  questions import questions
 
 #Background image
 screen = turtle.Screen()
@@ -42,10 +43,10 @@ user.color("green")
 # how should the user interact with this screen
 # it should be intermediate inputs
 
+questions()
 
 user.forward(275)
 user.shapesize(2,2,1)
-
 
 user.forward(275)
 user.shapesize(3,3,1)
@@ -84,5 +85,4 @@ user.shapesize(9,9,1)
 
 wn.exitonclick()
 
-
-
+print("Victory!")
