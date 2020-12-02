@@ -11,15 +11,15 @@ print("playerChoice", playerChoice)
 ##### the first one i tried the computer was always winning!
 #ask computer to flip
 computerflip = random.randint(0, 4)
-print("computerflip:",computerflip)
+print("computerflip:", computerflip)
 
 if  computerflip <= playerChoice :
-    print("You win! move on to the next level!")
+    print("Heads! move on to the next level!")
 
 elif computerflip == playerChoice :
-    print("You win, move on to the next level!")
+    print("Heads, move on to the next level!")
 else:
-    print("computer wins!, play again!")
+    print("Tails!, You lost,  play again!")
 
 
 print ("The End")   
