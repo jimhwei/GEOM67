@@ -48,3 +48,5 @@ with open('SnakesQs.csv') as csvfile:
     user_answer = input(">>")
     if user_answer == answers[q]:
         print("You've got it!")
+    else:
+        print("Sorry that's not it, please try again")
