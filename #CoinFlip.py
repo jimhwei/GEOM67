@@ -6,11 +6,11 @@ Tails = 0
 # get player to enter choice
 ######## i intially had this sentence below as int(input....because the computer wil be entering a random int as well but its i
 # us rejecting it)
-playerChoice = input("Please enter your choice between 1 and 4")
+playerChoice = int(input("Please enter your choice between 1 and 4"))
 print("playerChoice", playerChoice)
 ##### the first one i tried the computer was always winning!
 #ask computer to flip
-computerflip = random.randint
+computerflip = random.randint(0, 4)
 print("computerflip:",computerflip)
 
 if  computerflip <= playerChoice :
