@@ -66,6 +66,9 @@ def questions():
             print("You've got it!")
         else:
             print("Sorry that's not it, please try again")
+
+        # removes the question from the list so we don't answer it again
+        nums.pop(q)
         
         return user_answer
 

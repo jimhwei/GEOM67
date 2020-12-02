@@ -8,7 +8,7 @@
 import turtle
 import csv
 import random
-from  questions import questions
+from questions import questions
 
 #Background image
 screen = turtle.Screen()
@@ -51,6 +51,7 @@ user.shapesize(2,2,1)
 user.forward(275)
 user.shapesize(3,3,1)
 
+questions()
 
 user.right(90)
 user.forward(170)
@@ -62,6 +63,7 @@ user.forward(275)
 user.left(2)
 user.shapesize(5,5,1)
 
+questions()
 user.right(2)
 user.forward(290)
 user.left(2)
@@ -72,6 +74,7 @@ user.forward(190)
 user.left(110)
 user.shapesize(7,7,1)
 
+questions()
 user.left(2)
 user.forward(270)
 user.right(2)
