@@ -10,6 +10,11 @@ import csv
 import random
 from questions import questions
 
+# Game introduction message
+
+print("Welcome to Group 2's Awesome Snakes and Ladders")
+
+
 #Background image
 screen = turtle.Screen()
 screen.setup(900,600)

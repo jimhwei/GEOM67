@@ -19,7 +19,7 @@ print("Player's Choice", user)
 #Error handling when user input other value
 while user.capitalize() not in options:
    print("Incorrect input. Please enter Rock, Paper, or Scissors")
-   user = input("Please choose one form Rock, Paper, and Scissors :" )
+   user = input("Please choose one form Rock, Paper, and Scissors:" )
    user = user.capitalize()
    print("Player's Choice", user)
 
@@ -27,7 +27,7 @@ while user.capitalize() not in options:
 
 import random
 Computer = random.choice(options)
-print(Computer)
+print("Computer's choice", Computer)
 
 #Compare the values
 winner = None
