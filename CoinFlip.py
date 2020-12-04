@@ -40,7 +40,7 @@ def Coinflip() :
             if  end.upper() == 'Y' :
                 break
 
-        
+    #illegal Values    
     except ValueError:
          print ("that is not a valid choice, please flip again") 
 
