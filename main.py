@@ -15,7 +15,7 @@ from rockpaperscissors import rps
 import time
 
 # Game introduction message
-game = ""
+game = "not over"
 while game != "over":
 
     print("Welcome to Group 2's Awesome Snakes and Ladders")
@@ -54,7 +54,8 @@ while game != "over":
     user.forward(275)
     user.shapesize(2,2,1)
 
-    #input()
+    MultiChoice()
+    print(game)
 
     user.forward(275)
     user.shapesize(3,3,1)

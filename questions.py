@@ -5,6 +5,8 @@
 import csv
 import random
 
+game = ""
+
 def MultiChoice():
     # opening the csv file
     with open('SnakesQs.csv') as csvfile:
@@ -39,9 +41,7 @@ def MultiChoice():
         # closing the csv file
         csvfile.close()
 
-        game = "over"
         counter = 0
-        print("counter is", counter)
 
         while counter < 3: 
 
@@ -52,11 +52,11 @@ def MultiChoice():
             
             # we shuffle the questions so the questions are random
             random.shuffle(nums)
-            print("nums is: " + str(nums))
+            # print("nums is: " + str(nums))
             
             q = nums[0]
-            print("This is Question:" + str(q))
-            # print(q)
+            # print("This is Question:" + str(q))
+            # # print(q)
             print("The correct answer is:" + str(answers[q]))
 
             print("Question: " + question[q])
@@ -68,6 +68,7 @@ def MultiChoice():
             print("Please answer this question using letters A, B, C, D")
             
             # Prompts user for input
+            print("counter is", counter)
             user_answer = input(">>")
             # Conditionals based on success or failure
             if user_answer.upper() == answers[q]:
@@ -77,7 +78,11 @@ def MultiChoice():
             else:
                 print("Sorry that's not it, please try again")
                 counter += 1
-        return game
-
+            if counter == 3:
+                game = "over"
+                print("This only shows when you fail 3 times")
+                print (game)
+                print("Something happened")
 # # calling function
-# MultiChoice()
+MultiChoice()
+print(game)
