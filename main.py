@@ -12,6 +12,7 @@ from questions import questions
 from CoinFlip import Coinflip
 from dice import diceroll
 from rockpaperscissors import rps
+import time
 
 # Game introduction message
 
@@ -19,7 +20,7 @@ print("Welcome to Group 2's Awesome Snakes and Ladders")
 print("There is series of questions are 3 minigames ")
 print("Each correct answer and win in the games moves you forward")
 ### Ask for player name
-Guest = input("Im Turtles, what your name?" :)
+Guest = input("Im Turtles, what's your name?" :)
 print ("Welcome", Guest)
 
 #Background image
@@ -40,7 +41,7 @@ wn = turtle.Screen()
 # initiate turtle
 user = turtle.Turtle()
 user.penup()
-user.goto(-180,120)
+user.goto(-270,190)
 user.shape("turtle")
 user.color("green")
 
@@ -55,7 +56,7 @@ user.color("green")
 # how should the user interact with this screen
 # it should be intermediate inputs
 
-questions()
+# questions()
 
 user.forward(275)
 user.shapesize(2,2,1)
@@ -63,37 +64,37 @@ user.shapesize(2,2,1)
 user.forward(275)
 user.shapesize(3,3,1)
 
-Coinflip()
+# Coinflip()
 user.right(90)
-user.forward(170)
+user.forward(210)
 user.right(90)
 user.shapesize(4,4,1)
 
-user.right(2)
+# user.right(2)
 user.forward(275)
-user.left(2)
+# user.left(2)
 user.shapesize(5,5,1)
 
-diceroll()
-user.right(2)
-user.forward(290)
-user.left(2)
+# diceroll()
+# user.right(2)
+user.forward(270)
+# user.left(2)
 user.shapesize(6,6,1)
 
-user.left(70)
+user.left(90)
 user.forward(190)
-user.left(110)
+user.left(90)
 user.shapesize(7,7,1)
 
-rps()
-user.left(2)
+# rps()
+# user.left(2)
 user.forward(270)
-user.right(2)
+# user.right(2)
 user.shapesize(8,8,1)
 
-user.left(2)
-user.forward(250)
-user.right(2)
+# user.left(2)
+user.forward(270)
+# user.right(2)
 user.shapesize(9,9,1)
 
 print("Congrats Master", Guest)

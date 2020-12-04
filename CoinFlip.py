@@ -45,4 +45,4 @@ def Coinflip() :
     except ValueError:
          print ("that is not a valid choice, please flip again") 
   
-Coinflip()
+#Coinflip()
