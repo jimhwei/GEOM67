@@ -11,6 +11,8 @@ def rps():
    options = ["Rock", "Paper", "Scissors"]
    attempts = 0
 
+   #Loop if player lose or tie
+   #Max 3 attempts allowed 
    while attempts < 3:
 
       #Get user selection
@@ -64,7 +66,7 @@ def rps():
 
       #Print the results
 
-
+      #If player loose or tie
       attempts += 1
       if winner == "Computer" :
          print("You lose. Try again") 
@@ -72,11 +74,15 @@ def rps():
       elif winner == None:
          print("Tied. Try again!")
       
+      #If player win
       else:
          print("Congraturations. You win")
          return True
 
+      #Print remaining attempts   
       print(f"You have {3 - attempts} attempts left.")
+
+   #If player didn't win after 3 attempts   
    print("GAME OVER!")
    return False
 
