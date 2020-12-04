@@ -39,39 +39,45 @@ def MultiChoice():
         # closing the csv file
         csvfile.close()
 
-        # print("amount of rows:" + str(len(question)))
-        length = len(question)
-        nums = []
-        nums.extend(range(1,length))
-        
-        # we shuffle the questions so the questions are random
-        random.shuffle(nums)
-        print("nums is: " + str(nums))
-        
-        q = nums[0]
-        print("This is Question:" + str(q))
-        # print(q)
-        print("The correct answer is:" + str(answers[q]))
+        game = "over"
+        counter = 0
+        print("counter is", counter)
 
-        print("Question: " + question[q])
-        print("A) " + option1[q])
-        print("B) " + option2[q])
-        print("C) " + option3[q])
-        print("D) " + option4[q])
-        
-        print("Please answer this question using letters A, B, C, D")
+        while counter < 3: 
 
-        # Prompts user for input
-        user_answer = input(">>")
-        # Conditionals based on success or failure
-        if user_answer.upper() == answers[q]:
-            print("You've got it!")
-            print("Nums before:", nums)
-        else:
-            print("Sorry that's not it, please try again")
-            counter = 1
-        
-        return counter
+            # print("amount of rows:" + str(len(question)))
+            length = len(question)
+            nums = []
+            nums.extend(range(1,length))
+            
+            # we shuffle the questions so the questions are random
+            random.shuffle(nums)
+            print("nums is: " + str(nums))
+            
+            q = nums[0]
+            print("This is Question:" + str(q))
+            # print(q)
+            print("The correct answer is:" + str(answers[q]))
+
+            print("Question: " + question[q])
+            print("A) " + option1[q])
+            print("B) " + option2[q])
+            print("C) " + option3[q])
+            print("D) " + option4[q])
+            
+            print("Please answer this question using letters A, B, C, D")
+            
+            # Prompts user for input
+            user_answer = input(">>")
+            # Conditionals based on success or failure
+            if user_answer.upper() == answers[q]:
+                print("You've got it!")
+                print("Nums before:", nums)
+                break
+            else:
+                print("Sorry that's not it, please try again")
+                counter += 1
+        return game
 
 # # calling function
-# questions()
+# MultiChoice()
