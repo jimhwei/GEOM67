@@ -83,7 +83,7 @@ user.forward(275)
 user.shapesize(5,5,1)
 
 #input()
-# diceroll()
+#diceroll()
 # user.right(2)
 user.forward(270)
 # user.left(2)
@@ -96,7 +96,7 @@ user.left(100)
 user.shapesize(7,7,1)
 
 #input()
-# rps()
+rps()    
 # user.left(2)
 user.forward(270)
 # user.right(2)
@@ -125,4 +125,4 @@ print("Congrats Master", Guest)
 
 print("Click to Exit Game")
 
-# wn.exitonclick()
+wn.exitonclick()

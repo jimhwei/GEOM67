@@ -9,61 +9,76 @@ def rps():
    #Options of Rock, Paper and Scissors
 
    options = ["Rock", "Paper", "Scissors"]
+   attempts = 0
 
-   #Get user selection
+   while attempts < 3:
 
-   user = input("Please choose one form Rock, Paper, and Scissors :")
-   user = user.capitalize()
-   print("Player's Choice", user)
-
-   #Error handling when user input other value
-   while user.capitalize() not in options:
-      print("Incorrect input. Please enter Rock, Paper, or Scissors")
-      user = input("Please choose one form Rock, Paper, and Scissors:" )
+      #Get user selection
+      user = input("Please choose one form Rock, Paper, and Scissors :")
       user = user.capitalize()
       print("Player's Choice", user)
 
-   #Computer choose one value randomly
+      #Error handling when user input other value
+      while user.capitalize() not in options:
+         print("Incorrect input. Please enter Rock, Paper, or Scissors")
+         user = input("Please choose one form Rock, Paper, and Scissors:" )
+         user = user.capitalize()
+         print("Player's Choice", user)
 
-   import random
-   Computer = random.choice(options)
-   print("Computer's choice", Computer)
+      #Computer choose one value randomly
 
-   #Compare the values
-   winner = None
+      import random
+      Computer = random.choice(options)
+      print("Computer's choice", Computer)
 
-   #When Computer select Rock
-   if Computer == "Rock":
-      if user == "Scissors":
-         winner = "Computer"
-      elif user == "Paper":
-         winner = "user"   
+      #Compare the values
+      winner = None
+
+      #When Computer select Rock
+      if Computer == "Rock":
+         if user == "Scissors":
+            winner = "Computer"
+         elif user == "Paper":
+            winner = "user"   
+         else:
+            winner == None
+
+
+      #When Computer select Paper
+      elif Computer == "Paper":
+         if user == "Rock":
+            winner = "Computer"
+         elif user == "Scissors":
+            winner = "user"
+         else:
+            winner == None  
+
+      #When Computer select Scissors
+      else: 
+         if user == "Paper":
+            winner = "Computer"
+         elif user == "Rock":
+            winner = "user"
+         else:
+            winner == None
+
+      #Print the results
+
+
+      attempts += 1
+      if winner == "Computer" :
+         print("You lose. Try again") 
+               
+      elif winner == None:
+         print("Tied. Try again!")
+      
       else:
-         winner == None
+         print("Congraturations. You win")
+         return True
 
+      print(f"You have {3 - attempts} attempts left.")
+   print("GAME OVER!")
+   return False
 
-   #When Computer select Paper
-   elif Computer == "Paper":
-      if user == "Rock":
-         winner = "Computer"
-      elif user == "Scissors":
-         winner = "user"
-      else:
-         winner == None  
-
-   #When Computer select Scissors
-   else: 
-      if user == "Paper":
-         winner = "Computer"
-      elif user == "Rock":
-         winner = "user"
-      else:
-         winner == None
-
-   #Print the resaults
-   if winner == "Computer" :
-      print("You lose")
-   elif winner == "user":
-      print("You win!")
-   else:
-      print("Ties")
+ 
+      
