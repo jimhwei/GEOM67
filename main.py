@@ -20,7 +20,7 @@ print("Welcome to Group 2's Awesome Snakes and Ladders")
 print("There is series of questions are 3 minigames ")
 print("Each correct answer and win in the games moves you forward")
 ### Ask for player name
-Guest = input("Im Turtles, what's your name?" :)
+Guest = input("Im Turtles, what's your name? :")
 print ("Welcome", Guest)
 
 #Background image
@@ -107,8 +107,6 @@ user.forward(270)
 # user.right(2)
 user.shapesize(9,9,1)
 
-<<<<<<< HEAD
-
 screen.update()
 screen.bgpic('victory-01.png')
 
@@ -122,10 +120,8 @@ user.left(90)
 user.forward(900)
 
 
-print("Victory!")
-=======
 print("Congrats Master", Guest)
->>>>>>> 3c0c829a45703472ab95d374ea1cb7060488de6d
+
 print("Click to Exit Game")
 
 wn.exitonclick()
