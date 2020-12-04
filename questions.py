@@ -5,7 +5,7 @@
 import csv
 import random
 
-def questions():
+def MultiChoice():
     # opening the csv file
     with open('SnakesQs.csv') as csvfile:
         # the csv file reader uses comma as delimiter
@@ -21,7 +21,7 @@ def questions():
         # loops into the csv to pull column variable into list
         for row in readCSV:
             # column 0 in csv is the question, col 1 is choice A etc.
-            questions = row[0]
+            Q = row[0]
             A = row[1]
             B = row[2]
             C = row[3]
@@ -29,7 +29,7 @@ def questions():
             answer = row[5]
             
             # puts the variables back into the empty lists with append
-            question.append(questions)
+            question.append(Q)
             option1.append(A)
             option2.append(B)
             option3.append(C)
@@ -39,17 +39,18 @@ def questions():
         # closing the csv file
         csvfile.close()
 
-        # we don't want the same questions every game
-        # randomized to keep the game new
-        print("amount of rows:" + str(len(question)))
+        # print("amount of rows:" + str(len(question)))
         length = len(question)
         nums = []
         nums.extend(range(1,length))
+        
+        # we shuffle the questions so the questions are random
+        random.shuffle(nums)
         print("nums is: " + str(nums))
         
-        q = random.choice(nums)
+        q = nums[0]
         print("This is Question:" + str(q))
-        print(q)
+        # print(q)
         print("The correct answer is:" + str(answers[q]))
 
         print("Question: " + question[q])
@@ -65,13 +66,12 @@ def questions():
         # Conditionals based on success or failure
         if user_answer.upper() == answers[q]:
             print("You've got it!")
+            print("Nums before:", nums)
         else:
             print("Sorry that's not it, please try again")
-
-        # removes the question from the list so we don't answer it again
-        nums.pop(q)
+            counter = 1
         
-        return user_answer
+        return counter
 
 # # calling function
 # questions()

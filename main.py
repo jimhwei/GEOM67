@@ -8,13 +8,14 @@
 import turtle
 import csv
 import random
-from questions import questions
+from questions import MultiChoice
 from CoinFlip import Coinflip
 from dice import diceroll
 from rockpaperscissors import rps
 import time
 
 # Game introduction message
+
 
 print("Welcome to Group 2's Awesome Snakes and Ladders")
 
@@ -50,8 +51,6 @@ user.color("green")
 
 # how should the user interact with this screen
 # it should be intermediate inputs
-
-# questions()
 
 user.forward(275)
 user.shapesize(2,2,1)
@@ -95,4 +94,4 @@ user.shapesize(9,9,1)
 print("Victory!")
 print("Click to Exit Game")
 
-wn.exitonclick()
+# wn.exitonclick()
