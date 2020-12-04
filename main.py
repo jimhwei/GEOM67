@@ -9,6 +9,9 @@ import turtle
 import csv
 import random
 from questions import questions
+from CoinFlip import Coinflip
+from dice import diceroll
+from rockpaperscissors import rps
 
 # Game introduction message
 
@@ -56,8 +59,7 @@ user.shapesize(2,2,1)
 user.forward(275)
 user.shapesize(3,3,1)
 
-questions()
-
+Coinflip()
 user.right(90)
 user.forward(170)
 user.right(90)
@@ -68,7 +70,7 @@ user.forward(275)
 user.left(2)
 user.shapesize(5,5,1)
 
-questions()
+diceroll()
 user.right(2)
 user.forward(290)
 user.left(2)
@@ -79,7 +81,7 @@ user.forward(190)
 user.left(110)
 user.shapesize(7,7,1)
 
-questions()
+rps()
 user.left(2)
 user.forward(270)
 user.right(2)
@@ -90,7 +92,7 @@ user.forward(250)
 user.right(2)
 user.shapesize(9,9,1)
 
+print("Victory!")
+print("Click to Exit Game")
 
 wn.exitonclick()
-
-print("Victory!")

@@ -54,4 +54,4 @@ def diceroll():
             print ("Computer Wins. Try Again")
 
 # game function call  
-diceroll()
+# diceroll()
