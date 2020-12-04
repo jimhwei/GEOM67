@@ -6,7 +6,7 @@ def Coinflip() :
     flip = True
 
     while flip == True:
-        playerflip = int(input("Please enter your choice between 1 and 2"))
+        playerflip = int(input("Please enter your choice between 1 and 2: "))
         print("playerChoice", playerflip)
         ##Computer choice
         computerflip = random.randint(1,2)
@@ -18,6 +18,12 @@ def Coinflip() :
     #player Chooses head, computer chooses tail
         elif playerflip == 1 and  computerflip == 2:
             print("You both win move on to next level!")
+
+    # end = input("Do you want to stop playing coinflip?(Y/N)? ")
+    # print()
+    # if  end.upper() == 'Y' :
+    #     break
+          
 
     #player chooses tail, computer chooses tails
         elif playerflip == 2 and  computerflip == 1:
@@ -40,6 +46,4 @@ def Coinflip() :
     # if  end == 'y' :
     #   break    
 
-if __name__ == "__main__":
-    Coinflip()
-#    
+Coinflip()
