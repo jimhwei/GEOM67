@@ -9,7 +9,7 @@ import random
 #import turtle
 
 def diceroll():
-while   
+#while   
     try:
         # create a die
         dice = [1,2,3,4,5,6]
@@ -20,16 +20,16 @@ while
   
         # error handling for uder entry of value higher than 6 
         while playerRoll not in dice:
-            print ("Incorrect guess. Please enter a number between 1 and 6")
+            print ("Incorrect numeric value. Please enter a number between 1 and 6")
             playerRoll = int(input("Choose a number between 1 and 6: "))
             print("Player Choice: ", playerRoll)
     
-    
-    #computer random roll
+        #computer random roll
         dice_outcome = random.choice(dice)
         print("Computer Choice: ", dice_outcome)
         print()
-
+        
+    
 #############################################################
 #Output:
     # if playerRoll > 6:
@@ -42,7 +42,6 @@ while
             print ("Computer Wins. Try Again")
                 
     except ValueError:
-        print ("Oops! That's not a valid number. Try again")
+        print ("Oops! Letters are not going to work here. Try again")
 
-if __name__ == "__main__":
-    diceroll()
+diceroll()
