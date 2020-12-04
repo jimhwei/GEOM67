@@ -1,6 +1,7 @@
 #Lets play coin flip!
 # player vs computer
 #player is Head and computer is Tails, but shhhhh****,dont tell!
+
 import random 
 def Coinflip() :
 
@@ -43,6 +44,5 @@ def Coinflip() :
     #illegal Values    
     except ValueError:
          print ("that is not a valid choice, please flip again") 
-
-   
-# Coinflip()
+  
+#Coinflip()
