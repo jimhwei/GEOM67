@@ -16,7 +16,11 @@ from rockpaperscissors import rps
 # Game introduction message
 
 print("Welcome to Group 2's Awesome Snakes and Ladders")
-
+print("There is series of questions are 3 minigames ")
+print("Each correct answer and win in the games moves you forward")
+### Ask for player name
+Guest = input("Im Turtles, what your name?" :)
+print ("Welcome", Guest)
 
 #Background image
 screen = turtle.Screen()
@@ -92,7 +96,7 @@ user.forward(250)
 user.right(2)
 user.shapesize(9,9,1)
 
-print("Victory!")
+print("Congrats Master", Guest)
 print("Click to Exit Game")
 
 wn.exitonclick()
