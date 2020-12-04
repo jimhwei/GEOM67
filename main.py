@@ -22,7 +22,7 @@ print("Welcome to Group 2's Awesome Snakes and Ladders")
 screen = turtle.Screen()
 screen.setup(900,600)
 screen.bgpic('boardgamegrid-01.png')
-screen.update()
+
 
 # user = input("Select turtle object/color: ")
 
@@ -36,7 +36,7 @@ wn = turtle.Screen()
 # initiate turtle
 user = turtle.Turtle()
 user.penup()
-user.goto(-270,190)
+user.goto(-275,185)
 user.shape("turtle")
 user.color("green")
 
@@ -53,44 +53,68 @@ user.color("green")
 
 # questions()
 
+#input()
+
 user.forward(275)
 user.shapesize(2,2,1)
+
+#input()
 
 user.forward(275)
 user.shapesize(3,3,1)
 
+#input()
 # Coinflip()
-user.right(90)
-user.forward(210)
-user.right(90)
+user.right(85)
+user.forward(190)
+user.right(95)
 user.shapesize(4,4,1)
 
+#input()
 # user.right(2)
 user.forward(275)
 # user.left(2)
 user.shapesize(5,5,1)
 
+#input()
 # diceroll()
 # user.right(2)
 user.forward(270)
 # user.left(2)
 user.shapesize(6,6,1)
 
-user.left(90)
+#input()
+user.left(80)
 user.forward(190)
-user.left(90)
+user.left(100)
 user.shapesize(7,7,1)
 
+#input()
 # rps()
 # user.left(2)
 user.forward(270)
 # user.right(2)
 user.shapesize(8,8,1)
 
+#input()
 # user.left(2)
 user.forward(270)
 # user.right(2)
 user.shapesize(9,9,1)
+
+
+screen.update()
+screen.bgpic('victory-01.png')
+
+user.left(90)
+user.forward(360)
+user.left(90)
+user.forward(540)
+user.left(90)
+user.forward(360)
+user.left(90)
+user.forward(900)
+
 
 print("Victory!")
 print("Click to Exit Game")
