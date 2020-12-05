@@ -5,6 +5,9 @@
 # Turtle Library Reference
 # https://realpython.com/beginners-guide-python-turtle/
 
+# Imported necessary modules to run the game
+# Mini games were split up for individual work
+# Mini games are later incorporated to main function via import 
 import turtle
 from questions import MultiChoice
 from CoinFlip import Coinflip
@@ -14,7 +17,7 @@ from rockpaperscissors import rps
 # This function allows the user to replay the game again
 def replay():
     
-    # A post test loop used to replay game
+    # A post test loop used to replay game, variable user is the test condition
     user = ""
     while user.upper() not in ["Y","N"]:
 
@@ -28,8 +31,11 @@ def replay():
         else: 
             print("Sorry I didn't understand that. Enter 'N' to quit\n")
 
+# Main Function, the actual gameboard and gameplay
 def main():
 
+    # A post test loop to check if player fails at any part of the game
+    # Game failure mechanism, breaks loop based on imported game return values
     while True:
 
         # Asks for player name
@@ -48,26 +54,32 @@ def main():
         screen.setup(900,600)
         screen.bgpic('boardgamegrid-01.png')
 
-        # initiate turtle
+        # initialized turtle object to go to start position
+        # gave the turtle its shape and color 
         user = turtle.Turtle()
         user.penup()
         user.goto(-275,185)
         user.shape("turtle")
         user.color("green")
 
-        # Game 1
+        # Round 1 Game imported from questions
+        # Example of returning function value to break loop, if necessary
+        # Global settings for post test condition difficult due to import
         if MultiChoice() == "gameover":
             break
+        # Moves the turtle object (the player avatar)
         user.forward(275)
         user.shapesize(2,2,1)
         print()
 
+        # Round 2
         if rps() == "gameover":
             break
         user.forward(275)
         user.shapesize(3,3,1)
         print()
-
+        
+        # Round 3
         if MultiChoice() == "gameover":
             break
         user.right(85)
@@ -76,12 +88,14 @@ def main():
         user.shapesize(4,4,1)
         print()
 
+        # Round 4
         if diceroll() == "gameover":
             break
         user.forward(275)
         user.shapesize(5,5,1)
         print()
 
+        # Round 5
         print("\nBONUS QUESTION")
         if MultiChoice() == "gameover":
             break
@@ -95,12 +109,14 @@ def main():
         user.shapesize(7,7,1)
         print()
 
+        # Round 6
         if Coinflip() == "gameover":
             break
         user.forward(270)
         user.shapesize(8,8,1)
         print()
         
+        # Round 7
         if MultiChoice() == "gameover":
             break
         user.forward(270)
@@ -112,6 +128,7 @@ def main():
         screen.update()
         screen.bgpic('victory-01.png')
 
+        # Celebration Animation, triggers post test loop break 
         user.left(90)
         user.forward(360)
         user.left(90)
@@ -121,9 +138,11 @@ def main():
         user.left(90)
         user.forward(900)
         break
-
+    
+    # Exits the game and calls replay function
     print("Click to Exit Game")
     screen.exitonclick()
     replay()
 
+# main function driver
 main()
