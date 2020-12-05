@@ -5,7 +5,7 @@
 #compare to computer choice
 #turtle moves forward if user wins
 
-def rps():
+def RPS():
    #Options of Rock, Paper and Scissors
 
    options = ["Rock", "Paper", "Scissors"]
@@ -85,4 +85,4 @@ def rps():
    #If player didn't win after 3 attempts   
    print("GAME OVER!")
    game = "gameover"
-   return game # We don't need this if we are going to use exit code 0
+   return game

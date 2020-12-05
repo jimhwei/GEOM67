@@ -14,7 +14,7 @@
 import random
 
 #user defined function for game
-def diceroll():
+def DiceRoll():
 
     # counter used for monitoring how many tries left
     counter = 0
@@ -66,7 +66,7 @@ def diceroll():
         except ValueError:
             print ("Oops! Letters are not going to work here. Try again")
             # send user back to enter input
-            diceroll()
+            DiceRoll()
 
 # game function call  
 #diceroll()

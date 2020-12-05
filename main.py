@@ -1,17 +1,56 @@
-# Awesome Snakes & Turtles Game
+# Awesome Snakes & Turtles Game v1.0
 # Created By: IPGRP2 - J. Debono, K. Perdue, J. Seo, H. Wei
 # Date Modified December 04, 2020
-# Turtle Library Reference
-# https://realpython.com/beginners-guide-python-turtle/
+"""
+DOCUMENTATION
+
+The mini games were split up for individual work
+and then incorporated to main function via import
+In order of appearance: 
+questions.py: H. Wei
+rockpaperscissors: J. Seo
+dice.py: J. Debono
+coin.py: K. Purdue
+
+The purpose of this program is to: 
+-Create an entertaining and educational spatial game that appeals to children and adults
+-Used to display understanding of user defined functions to create a program
+-Meant to be used via command line inputs and turtle graphics screen
+
+Brief Description: 
+The game is divided into multiple python modules
+It contains 1 main program, and 4 modules
+The main program runs and integrates individual modules as part of  gameplay
+Each individual module contains values that
+are returned to the main program
+The main program has a primary post test loop that influence
+the flow of the game.
+The main program uses turtle graphics for gameplay and
+also contains a function for replaying
+
+Assumptions: 
+Program assumes all game related files are stored in one folder
+User has access to command line/terminal, have python 3.x installed,
+hardware necessary, and able to access the modules 
+used in the game (e.g. turtle graphics)
+
+Inputs: 
+Requires the SnakesQs.csv file to run game
+
+Outputs:
+Text prompts in command line and turtle graphics screen
+
+Turtle Library Reference
+https://realpython.com/beginners-guide-python-turtle/
+"""
 
 # Imported necessary modules to run the game
-# Mini games were split up for individual work
-# Mini games are later incorporated to main function via import 
+# Refer to documentation for module explanation
 import turtle
 from questions import MultiChoice
-from CoinFlip import Coinflip
-from dice import diceroll
-from rockpaperscissors import rps
+from rockpaperscissors import RPS
+from dice import DiceRoll
+from coin import Coinflip
 
 # This function allows the user to replay the game again
 def replay():
@@ -74,7 +113,7 @@ def main():
         print()
 
         # Round 2
-        if rps() == "gameover":
+        if RPS() == "gameover":
             break
         user.forward(275)
         user.shapesize(3,3,1)
@@ -90,7 +129,7 @@ def main():
         print()
 
         # Round 4
-        if diceroll() == "gameover":
+        if DiceRoll() == "gameover":
             break
         user.forward(275)
         user.shapesize(5,5,1)
