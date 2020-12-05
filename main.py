@@ -140,7 +140,7 @@ def main():
         break
     
     # Exits the game and calls replay function
-    print("Click to Exit Game")
+    print("Click Game Screen to Exit")
     screen.exitonclick()
     replay()
 
