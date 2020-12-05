@@ -51,34 +51,38 @@ def MultiChoice():
             random.shuffle(nums)
             
             q = nums[0]
-            # print("This is Question:" + str(q))
-            # print(q)
-            # print("The correct answer is:" + str(answers[q]))
 
-            print("Question: " + question[q])
-            print("A) " + option1[q])
-            print("B) " + option2[q])
-            print("C) " + option3[q])
-            print("D) " + option4[q])
-            
-            print("Please answer this question using letters A, B, C, D")
-
-            # Prompts user for input
-            user_answer = input(">>")
-            # Conditionals based on success or failure
-            if user_answer.upper() == answers[q]:
-                print("You've got it!")
-                break
-            else:
-                print("Sorry that's not it, try again")
-                counter += 1
-                print("That's strike", counter, "!\n")
+            while True:
+                print("Question: " + question[q])
+                print("A) " + option1[q])
+                print("B) " + option2[q])
+                print("C) " + option3[q])
+                print("D) " + option4[q])
                 
-                # Game over mechanism, returns variable game to main function
-                if counter == 3:
-                    print("GAME OVER")
-                    game = "gameover"
-                    return game
+                print("Please answer this question using letters A, B, C, D")
+
+                # Prompts user for input
+                # Uses conditions to determine victory or failure
+                user_answer = input(">>")
+                if user_answer.upper() == answers[q]:
+                    print("You've got it!")
+                    break # Breaks post test loop if answered successfuly
+                
+                elif user_answer.upper() not in ["A", "B", "C", "D"]:
+                    print("I didn't understand your input\n")
+
+                else:
+                    print("Sorry that's not it, try again")
+                    counter += 1
+                    print("That's strike", counter, "!\n")
+                    
+                    # Game over mechanism, returns variable game to main function
+                    if counter == 3:
+                        print("GAME OVER")
+                        game = "gameover"
+                        return game
+            break
+                
 
 # Calling function individually for testing
 # MultiChoice()
