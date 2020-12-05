@@ -13,13 +13,19 @@ from rockpaperscissors import rps
 
 # This function allows the user to replay the game again
 def replay():
-    print("Would you like to play again?")
-    user = input("Y/N:\n>>")
-    # Simple conditions to rerun the program
-    if user.upper() == "Y":
-        main()
-    else:
-        print("See you next time!")
+    
+    user = ""
+    while user.upper() not in ["Y","N"]:
+
+        print("Would you like to play again?")
+        user = input("Y/N:\n>>")
+        # Simple conditions to rerun the program
+        if user.upper() == "Y":
+            main()
+        elif user.upper() == "N":
+            print("See you next time!")
+        else: 
+            print("Sorry I didn't understand that. Enter 'N' to quit")
 
 def main():
 
@@ -55,7 +61,7 @@ def main():
         user.shapesize(2,2,1)
         print()
 
-        if Coinflip() == "gameover":
+        if rps() == "gameover":
             break
         user.forward(275)
         user.shapesize(3,3,1)
@@ -88,7 +94,7 @@ def main():
         user.shapesize(7,7,1)
         print()
 
-        if rps() == "gameover":
+        if Coinflip() == "gameover":
             break
         user.forward(270)
         user.shapesize(8,8,1)
