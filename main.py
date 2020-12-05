@@ -16,7 +16,7 @@ def replay():
     print("Would you like to play again?")
     user = input("Y/N:\n>>")
     # Simple conditions to rerun the program
-    if user.upper == "Y":
+    if user.upper() == "Y":
         main()
     else:
         print("See you next time!")
@@ -26,8 +26,9 @@ def main():
     while True:
 
         # Asks for player name
-        # Guest = input("\nWelcome to Group 2's Awesome Snakes and Ladders Game\nI'm Turtles, what's your name? >>")
-        # print ("Welcome", Guest)
+        Guest = input("\nWelcome to Group 2's Awesome Snakes and Ladders Game\nI'm Turtles, what's your name? >>")
+        print ("Welcome", Guest)
+
         # Game introduction message
         print("There is a series of questions and 3 minigames")
         print("Help me move through the squares!")
@@ -35,19 +36,17 @@ def main():
         print("If you fail 3 times then the game is over! GOOD LUCK")
         print()
 
-        #Background image
+        # Background image set up
         screen = turtle.Screen()
         screen.setup(900,600)
         screen.bgpic('boardgamegrid-01.png')
 
-        # user = input("Select turtle object/color: ")
-
-        # setting up the turtle
-        wn = turtle.Screen()
-        # background change
-        # wn.bgcolor("grey")
-        # user gets to choose shapes
-        # turtle.getshapes()
+        # # setting up the turtle
+        # wn = turtle.Screen()
+        # # background change
+        # # wn.bgcolor("grey")
+        # # user gets to choose shapes
+        # # turtle.getshapes()
 
         # initiate turtle
         user = turtle.Turtle()
@@ -61,9 +60,10 @@ def main():
             break
         user.forward(275)
         user.shapesize(2,2,1)
+        print()
 
-
-        Coinflip()
+        if Coinflip() == "gameover":
+            break
         user.forward(275)
         user.shapesize(3,3,1)
         print()
@@ -76,7 +76,8 @@ def main():
         user.shapesize(4,4,1)
         print()
 
-        diceroll()
+        if diceroll() == "gameover":
+            break
         user.forward(275)
         user.shapesize(5,5,1)
         print()
@@ -92,8 +93,10 @@ def main():
         user.forward(190)
         user.left(100)
         user.shapesize(7,7,1)
+        print()
 
-        rps()
+        if rps() == "gameover":
+            break
         user.forward(270)
         user.shapesize(8,8,1)
         print()
@@ -119,8 +122,7 @@ def main():
         # print("\nCongrats Master", Guest, ", you have beaten the game!")
         print("Click to Exit Game")
 
-        wn.exitonclick()
-        replay()
+        screen.exitonclick()
+    replay()
 
 main()
-replay()

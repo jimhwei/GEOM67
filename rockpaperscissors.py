@@ -77,12 +77,12 @@ def rps():
       #If player win
       else:
          print("Congraturations. You win")
-         return True # We don't need this if we are going to use exit code 0
+         return True
 
       #Print remaining attempts   
       print(f"You have {3 - attempts} attempts left.")
 
    #If player didn't win after 3 attempts   
    print("GAME OVER!")
-   exit(0)
-   return False # We don't need this if we are going to use exit code 0
+   game = "gameover"
+   return game # We don't need this if we are going to use exit code 0

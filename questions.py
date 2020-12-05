@@ -73,11 +73,12 @@ def MultiChoice():
                 print("Sorry that's not it, try again")
                 counter += 1
                 print("That's strike", counter, "!\n")
+                
+                # Game over mechanism, returns variable game to main function
                 if counter == 3:
                     print("GAME OVER")
                     game = "gameover"
-                    # exit(0)
                     return game
 
-# calling function individually for testing
+# Calling function individually for testing
 # MultiChoice()
