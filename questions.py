@@ -44,12 +44,13 @@ def MultiChoice():
         nums = []
         nums.extend(range(1,length))
         
+        counter = 0
+
         # we shuffle the questions so the questions are random
         random.shuffle(nums)
-        print("nums is: " + str(nums))
         
         q = nums[0]
-        print("This is Question:" + str(q))
+        # print("This is Question:" + str(q))
         # print(q)
         print("The correct answer is:" + str(answers[q]))
 
@@ -64,14 +65,17 @@ def MultiChoice():
         # Prompts user for input
         user_answer = input(">>")
         # Conditionals based on success or failure
-        if user_answer.upper() == answers[q]:
-            print("You've got it!")
-            print("Nums before:", nums)
-        else:
-            print("Sorry that's not it, please try again")
-            counter = 1
-        
-        return counter
+        while counter < 3:
+            if user_answer.upper() == answers[q]:
+                print("You've got it! Time for a minigame:")
+                break
+            else:
+                print("Sorry that's not it, try again")
+                counter += 1
+                print("That's strike", counter, "!\n")
+                if counter == 3:
+                    print("GAME OVER")
+                    exit(0)
 
-# # calling function
-# questions()
+# calling function individually for testing
+# MultiChoice()

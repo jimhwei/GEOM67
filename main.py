@@ -6,32 +6,33 @@
 # https://realpython.com/beginners-guide-python-turtle/
 
 import turtle
-import csv
-import random
 from questions import MultiChoice
 from CoinFlip import Coinflip
 from dice import diceroll
 from rockpaperscissors import rps
-import time
 
-# Game introduction message
-game = "not over"
-while game != "over":
+def replay():
+    print("Would you like to play again?")
+    user = input("Y/N:\n>>")
+    if user.upper == "Y":
+        main()
+    else:
+        print("See you next time!")
 
-    print("Welcome to Group 2's Awesome Snakes and Ladders")
-    print("There is a series of questions and 3 minigames ")
-    print("Each correct answer and win in the games moves you forward")
-    print("If you fail 3 times then it's gameover!")
-
+def main():
     # Asks for player name
-    Guest = input("Im Turtles, what's your name? :")
+    Guest = input("\nWelcome to Group 2's Awesome Snakes and Ladders\nI'm Turtles, what's your name? >>")
     print ("Welcome", Guest)
+    # Game introduction message
+    print("There is a series of questions and 3 minigames")
+    print("Help me move through the squares!")
+    print("Each correct answer and win in the games moves me forward")
+    print("If you fail 3 times then the game is over! GOOD LUCK")
 
     #Background image
     screen = turtle.Screen()
     screen.setup(900,600)
     screen.bgpic('boardgamegrid-01.png')
-
 
     # user = input("Select turtle object/color: ")
 
@@ -50,12 +51,10 @@ while game != "over":
     user.color("green")
 
     ###############################################
-
     user.forward(275)
     user.shapesize(2,2,1)
 
     MultiChoice()
-    print(game)
 
     user.forward(275)
     user.shapesize(3,3,1)
@@ -115,4 +114,6 @@ while game != "over":
     print("Click to Exit Game")
 
     wn.exitonclick()
-    game = "over"
+    replay()
+
+main()
