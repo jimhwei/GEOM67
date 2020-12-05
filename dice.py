@@ -4,9 +4,11 @@
 #compare to computer random choice
 #if user and computer choice match or is higher than computer choice, user wins
 #turtle moves forward if user wins
-#invalid inputs: integers less than 0 or greater than 7, negative integers,
+#invalid inputs handled: integers less than 0 or greater than 7, negative integers,
 # and string values
 #play continues until user wins
+#input for user recieved by keyboard entry and promps
+# assistance with Counter, While and Try section by Jim Wei
 
 #import random module 
 import random
@@ -16,7 +18,7 @@ def diceroll():
 
     # counter used for monitoring how many tries left
     counter = 0
-
+    #counter for maximum of 3 tries
     while counter < 3: 
         # start of error handling 
         try:
@@ -43,14 +45,18 @@ def diceroll():
             #win scenario 1: guess number higher than computer
             if dice_outcome < playerRoll:
                 print ("You guessed a higher number than the computer! You Win!")
+                print("GAME OVER")
+                exit(0)
                 break
             #win scenario 2: match same number as computer
             elif dice_outcome == playerRoll:
                 print ("You matched the computer! Great guess! You Win!")
+                print("GAME OVER")
+                exit(0)
                 break
             #loss scenario: computer select number higher than user
             else:
-                print ("Computer Wins. Try Again")
+                print ("Computer Wins!")
                 counter += 1
                 print("Strike", counter, "!")
                 
@@ -66,4 +72,4 @@ def diceroll():
             diceroll()
 
 # game function call  
-# diceroll()
+#diceroll()
