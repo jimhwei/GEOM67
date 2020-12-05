@@ -6,7 +6,8 @@ import random
 def Coinflip() :
 
     try:
-
+        # Counting amount of tries left
+        counter = 0
         flip = True
 
         while flip == True:
@@ -26,23 +27,33 @@ def Coinflip() :
         #player chooses tail, computer chooses tails
             elif playerflip == 2 and  computerflip == 1:
                 print("Tails, Computer wins!")  
+                counter += 1
+                print("STRIKE", counter)
             
         # player chooses tails, computer chooses tails
             elif playerflip == 2 and  computerflip == 2:
                 print("Tails, Computer wins!") 
+                counter += 1
+                print("STRIKE", counter)
 
         #Player enters number other than 1 or 2:
             else: 
                 print("That was not a valid choice")
 
-        #does player want to continue
+            # Game end mechanism
+            if counter == 3:
+                print("GAME OVER")
+                exit(0)
+            
+            #does player want to continue
             end = input("Do you want to stop playing coinflip?(Y/N)? ")
             print()
             if  end.upper() == 'Y' :
                 break
+            
 
     #illegal Values    
     except ValueError:
          print ("that is not a valid choice, please flip again") 
   
-#Coinflip()
+# Coinflip()

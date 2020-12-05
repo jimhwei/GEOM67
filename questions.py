@@ -1,5 +1,6 @@
 # This program allows us to update questions using csv files
 # Creator Honglin (Jim) Wei
+# Modified: Dec 4, 2020
 
 # import the correct modules
 import csv
@@ -45,29 +46,28 @@ def MultiChoice():
         nums.extend(range(1,length))
         
         counter = 0
-
-        # we shuffle the questions so the questions are random
-        random.shuffle(nums)
-        
-        q = nums[0]
-        # print("This is Question:" + str(q))
-        # print(q)
-        print("The correct answer is:" + str(answers[q]))
-
-        print("Question: " + question[q])
-        print("A) " + option1[q])
-        print("B) " + option2[q])
-        print("C) " + option3[q])
-        print("D) " + option4[q])
-        
-        print("Please answer this question using letters A, B, C, D")
-
-        # Prompts user for input
-        user_answer = input(">>")
-        # Conditionals based on success or failure
         while counter < 3:
+            # we shuffle the questions so the questions are random
+            random.shuffle(nums)
+            
+            q = nums[0]
+            # print("This is Question:" + str(q))
+            # print(q)
+            print("The correct answer is:" + str(answers[q]))
+
+            print("Question: " + question[q])
+            print("A) " + option1[q])
+            print("B) " + option2[q])
+            print("C) " + option3[q])
+            print("D) " + option4[q])
+            
+            print("Please answer this question using letters A, B, C, D")
+
+            # Prompts user for input
+            user_answer = input(">>")
+            # Conditionals based on success or failure
             if user_answer.upper() == answers[q]:
-                print("You've got it! Time for a minigame:")
+                print("You've got it!")
                 break
             else:
                 print("Sorry that's not it, try again")

@@ -1,6 +1,6 @@
 # Awesome Snakes & Turtles Game
 # Created By: IPGRP2 - J. Debono, K. Perdue, J. Seo, H. Wei
-# November 2020
+# Date Modified December 04, 2020
 
 # Turtle Library Reference
 # https://realpython.com/beginners-guide-python-turtle/
@@ -50,52 +50,48 @@ def main():
     user.shape("turtle")
     user.color("green")
 
-    ###############################################
+    # Game 1
+    print()
+    MultiChoice()
     user.forward(275)
     user.shapesize(2,2,1)
 
-    MultiChoice()
-
+    print()
+    Coinflip()
     user.forward(275)
     user.shapesize(3,3,1)
 
-    #input()
-    # Coinflip()
+    print()
+    MultiChoice()
     user.right(85)
     user.forward(190)
     user.right(95)
     user.shapesize(4,4,1)
 
-    #input()
-    # user.right(2)
+    print()
+    diceroll()
     user.forward(275)
-    # user.left(2)
     user.shapesize(5,5,1)
 
-    #input()
-    # diceroll()
-    # user.right(2)
+    print("\nBONUS QUESTION")
+    MultiChoice()
+    print("Congrats you move two squares!")
     user.forward(270)
-    # user.left(2)
     user.shapesize(6,6,1)
 
-    #input()
     user.left(80)
     user.forward(190)
     user.left(100)
     user.shapesize(7,7,1)
 
-    #input()
-    # rps()
-    # user.left(2)
+    print()
+    rps()
     user.forward(270)
-    # user.right(2)
     user.shapesize(8,8,1)
-
-    #input()
-    # user.left(2)
+    
+    print()
+    MultiChoice()
     user.forward(270)
-    # user.right(2)
     user.shapesize(9,9,1)
 
     screen.update()
@@ -110,7 +106,7 @@ def main():
     user.left(90)
     user.forward(900)
 
-    print("Congrats Master", Guest, ", you have beaten the game!")
+    print("\nCongrats Master", Guest, ", you have beaten the game!")
     print("Click to Exit Game")
 
     wn.exitonclick()
