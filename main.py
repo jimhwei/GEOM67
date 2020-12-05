@@ -1,8 +1,6 @@
 # Awesome Snakes & Turtles Game
 # Created By: IPGRP2 - J. Debono, K. Perdue, J. Seo, H. Wei
 # Date Modified December 04, 2020
-
-
 # Turtle Library Reference
 # https://realpython.com/beginners-guide-python-turtle/
 
