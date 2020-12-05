@@ -43,7 +43,8 @@ def Coinflip() :
             # Game end mechanism
             if counter == 3:
                 print("GAME OVER")
-                exit(0)
+                game = "gameover"
+                return game
             
             #does player want to continue
             end = input("Do you want to stop playing coinflip?(Y/N)? ")

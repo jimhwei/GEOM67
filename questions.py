@@ -1,4 +1,4 @@
-# This program allows us to update questions using csv files
+# This program allows us to reuse questions using csv files
 # Creator Honglin (Jim) Wei
 # Modified: Dec 4, 2020
 
@@ -75,7 +75,9 @@ def MultiChoice():
                 print("That's strike", counter, "!\n")
                 if counter == 3:
                     print("GAME OVER")
-                    exit(0)
+                    game = "gameover"
+                    # exit(0)
+                    return game
 
 # calling function individually for testing
 # MultiChoice()

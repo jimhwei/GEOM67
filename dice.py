@@ -59,7 +59,8 @@ def diceroll():
                 # mechanism for ending game 
                 if counter == 3:
                     print("GAME OVER")
-                    exit(0)
+                    game = "gameover"
+                    return game
 
         # error handling for string entries 
         except ValueError:
