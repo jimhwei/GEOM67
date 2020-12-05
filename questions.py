@@ -1,6 +1,10 @@
 # This program allows us to reuse questions using csv files
 # Creator Honglin (Jim) Wei
 # Modified: Dec 4, 2020
+#Questions sources: https://www.transum.org/Software/Fun_Maths/Trivia.asp;
+#https://icebreakerideas.com/math-trivia/#Number_Trivia; 
+#https://www.usefultrivia.com/geography_trivia/index.html;
+#https://play.howstuffworks.com/quiz/could-you-pass-this-canadian-geography-quiz
 
 # import the correct modules
 import csv
