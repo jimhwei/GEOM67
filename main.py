@@ -21,7 +21,7 @@ def replay():
 
 def main():
     # Asks for player name
-    Guest = input("\nWelcome to Group 2's Awesome Snakes and Ladders\nI'm Turtles, what's your name? >>")
+    Guest = input("\nWelcome to Group 2's Awesome Snakes and Ladders Game\nI'm Turtles, what's your name? >>")
     print ("Welcome", Guest)
     # Game introduction message
     print("There is a series of questions and 3 minigames")

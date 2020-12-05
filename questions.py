@@ -53,7 +53,7 @@ def MultiChoice():
             q = nums[0]
             # print("This is Question:" + str(q))
             # print(q)
-            print("The correct answer is:" + str(answers[q]))
+            # print("The correct answer is:" + str(answers[q]))
 
             print("Question: " + question[q])
             print("A) " + option1[q])
