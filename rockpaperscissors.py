@@ -16,7 +16,7 @@ def rps():
    while attempts < 3:
 
       #Get user selection
-      user = input("Please choose one form Rock, Paper, and Scissors :")
+      user = input("Please choose one form Rock, Paper, and Scissors: ")
       user = user.capitalize()
       print("Player's Choice", user)
 

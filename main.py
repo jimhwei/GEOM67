@@ -41,13 +41,6 @@ def main():
         screen.setup(900,600)
         screen.bgpic('boardgamegrid-01.png')
 
-        # # setting up the turtle
-        # wn = turtle.Screen()
-        # # background change
-        # # wn.bgcolor("grey")
-        # # user gets to choose shapes
-        # # turtle.getshapes()
-
         # initiate turtle
         user = turtle.Turtle()
         user.penup()
@@ -107,6 +100,8 @@ def main():
         user.shapesize(9,9,1)
         print()
 
+        # Congratulates player through message and on turtle window
+        print("\nCongrats Master", Guest, ", you have beaten the game!")
         screen.update()
         screen.bgpic('victory-01.png')
 
@@ -118,11 +113,10 @@ def main():
         user.forward(360)
         user.left(90)
         user.forward(900)
+        break
 
-        # print("\nCongrats Master", Guest, ", you have beaten the game!")
-        print("Click to Exit Game")
-
-        screen.exitonclick()
+    print("Click to Exit Game")
+    screen.exitonclick()
     replay()
 
 main()

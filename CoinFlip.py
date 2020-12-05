@@ -48,7 +48,6 @@ def Coinflip() :
             
             #does player want to continue
             end = input("Do you want to stop playing coinflip?(Y/N)? ")
-            print()
             if  end.upper() == 'Y' :
                 break
             
