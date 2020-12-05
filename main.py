@@ -14,6 +14,7 @@ from rockpaperscissors import rps
 # This function allows the user to replay the game again
 def replay():
     
+    # A post test loop used to replay game
     user = ""
     while user.upper() not in ["Y","N"]:
 
@@ -25,7 +26,7 @@ def replay():
         elif user.upper() == "N":
             print("See you next time!")
         else: 
-            print("Sorry I didn't understand that. Enter 'N' to quit")
+            print("Sorry I didn't understand that. Enter 'N' to quit\n")
 
 def main():
 
