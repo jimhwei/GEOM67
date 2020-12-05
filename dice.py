@@ -45,14 +45,10 @@ def diceroll():
             #win scenario 1: guess number higher than computer
             if dice_outcome < playerRoll:
                 print ("You guessed a higher number than the computer! You Win!")
-                print("GAME OVER")
-                exit(0)
                 break
             #win scenario 2: match same number as computer
             elif dice_outcome == playerRoll:
                 print ("You matched the computer! Great guess! You Win!")
-                print("GAME OVER")
-                exit(0)
                 break
             #loss scenario: computer select number higher than user
             else:
