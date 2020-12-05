@@ -41,11 +41,13 @@ def main():
         # Asks for player name
         Guest = input("\nWelcome to Group 2's Awesome Snakes and Ladders Game\nI'm Turtles, what's your name? >>")
         print ("Welcome", Guest)
+        print()
 
         # Game introduction message
-        print("There is a series of questions and 3 minigames")
+        print("There are a series of questions and 3 minigames")
         print("Help me move through the squares!")
-        print("Each correct answer and win in the games moves me forward")
+        print()
+        print("Each correct answer and win in the game moves me forward")
         print("If you fail 3 times then the game is over! GOOD LUCK")
         print()
 
