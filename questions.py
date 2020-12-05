@@ -64,26 +64,26 @@ def MultiChoice():
             # We shuffle the questions so the questions are random
             random.shuffle(nums)
             
-            # The question is always the first question in the nums list
-            q = nums[0]
+            # The question is always in the nums list index 0
+            i = nums[0]
 
             # Post test loop 2 to handle invalid entries
             while True:
-                print("Question: " + question[q])
-                print("A) " + option1[q])
-                print("B) " + option2[q])
-                print("C) " + option3[q])
-                print("D) " + option4[q])
+                print("Question: " + question[i])
+                print("A) " + option1[i])
+                print("B) " + option2[i])
+                print("C) " + option3[i])
+                print("D) " + option4[i])
                 print("Please answer this question using letters A, B, C, D")
 
                 # Prompts user for input
                 # Uses conditions to determine correct or incorrect answers
                 user_answer = input(">>")
-                if user_answer.upper() == answers[q]:
+                if user_answer.upper() == answers[i]:
                     print("You've got it!")
                     break # Breaks post test loop 2 if answered successfuly
                 
-                # Handles in valid responses
+                # Handles invalid responses
                 elif user_answer.upper() not in ["A", "B", "C", "D"]:
                     print("I didn't understand your input\n")
 
@@ -106,4 +106,4 @@ def MultiChoice():
                 
 
 # Individual testing, should be commented out
-# MultiChoice()
+MultiChoice()
