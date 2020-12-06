@@ -184,10 +184,11 @@ def main():
         user.left(90)
         user.forward(900)
 
+        #Call replay function
+        replay() 
+
         #Exit the game
         break           
-    #Call replay function
-    replay() 
 
 # Main function driver
 main()
