@@ -69,7 +69,6 @@ def replay():
             print("See you next time!")
             print("Click Game Screen to Exit")
             screen.exitonclick()
-            continue
         else: 
             print("Sorry I didn't understand that. Enter 'N' to quit\n")
 
@@ -118,71 +117,71 @@ def main():
         user.shapesize(2,2,1)
         print()
 
-        # # Round 2
-        # if RPS() == "gameover":
-        #     break
-        # user.forward(275)
-        # user.shapesize(3,3,1)
-        # print()
+        # Round 2
+        if RPS() == "gameover":
+            break
+        user.forward(275)
+        user.shapesize(3,3,1)
+        print()
         
-        # # Round 3
-        # if MultiChoice() == "gameover":
-        #     break
-        # user.right(85)
-        # user.forward(190)
-        # user.right(95)
-        # user.shapesize(4,4,1)
-        # print()
+        # Round 3
+        if MultiChoice() == "gameover":
+            break
+        user.right(85)
+        user.forward(190)
+        user.right(95)
+        user.shapesize(4,4,1)
+        print()
 
-        # # Round 4
-        # if DiceRoll() == "gameover":
-        #     break
-        # user.forward(275)
-        # user.shapesize(5,5,1)
-        # print()
+        # Round 4
+        if DiceRoll() == "gameover":
+            break
+        user.forward(275)
+        user.shapesize(5,5,1)
+        print()
 
-        # # Round 5
-        # print("\nBONUS QUESTION")
-        # if MultiChoice() == "gameover":
-        #     break
-        # print("Congrats you move two squares!")
-        # user.forward(270)
-        # user.shapesize(6,6,1)
+        # Round 5
+        print("\nBONUS QUESTION")
+        if MultiChoice() == "gameover":
+            break
+        print("Congrats you move two squares!")
+        user.forward(270)
+        user.shapesize(6,6,1)
 
-        # user.left(80)
-        # user.forward(190)
-        # user.left(100)
-        # user.shapesize(7,7,1)
-        # print()
+        user.left(80)
+        user.forward(190)
+        user.left(100)
+        user.shapesize(7,7,1)
+        print()
 
-        # # Round 6
-        # if Coinflip() == "gameover":
-        #     break
-        # user.forward(270)
-        # user.shapesize(8,8,1)
-        # print()
+        # Round 6
+        if Coinflip() == "gameover":
+            break
+        user.forward(270)
+        user.shapesize(8,8,1)
+        print()
         
-        # # Round 7
-        # if MultiChoice() == "gameover":
-        #     break
-        # user.forward(270)
-        # user.shapesize(9,9,1)
-        # print()
+        # Round 7
+        if MultiChoice() == "gameover":
+            break
+        user.forward(270)
+        user.shapesize(9,9,1)
+        print()
 
-        # # Congratulates player through message and on turtle window
-        # print("\nCongrats Master", Guest, ", you have beaten the game!")
-        # screen.update()
-        # screen.bgpic('victory-01.png')
+        # Congratulates player through message and on turtle window
+        print("\nCongrats Master", Guest, ", you have beaten the game!")
+        screen.update()
+        screen.bgpic('victory-01.png')
 
-        # # Celebration Animation, triggers post test loop break 
-        # user.left(90)
-        # user.forward(360)
-        # user.left(90)
-        # user.forward(540)
-        # user.left(90)
-        # user.forward(360)
-        # user.left(90)
-        # user.forward(900)
+        # Celebration Animation, triggers post test loop break 
+        user.left(90)
+        user.forward(360)
+        user.left(90)
+        user.forward(540)
+        user.left(90)
+        user.forward(360)
+        user.left(90)
+        user.forward(900)
 
         #Exit the game
         break           
