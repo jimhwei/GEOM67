@@ -94,7 +94,9 @@ def main():
         print()
 
         # Background image set up
+        # Screen is cleared for when game is replayed again
         screen = turtle.Screen()
+        screen.clearscreen()
         screen.setup(900,600)
         screen.bgpic('boardgamegrid-01.png')
 
@@ -181,12 +183,11 @@ def main():
         user.forward(360)
         user.left(90)
         user.forward(900)
-        
-        #Call replay function
-        replay() 
 
         #Exit the game
         break           
+    #Call replay function
+    replay() 
 
-# main function driver
+# Main function driver
 main()
