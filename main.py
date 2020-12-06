@@ -65,6 +65,7 @@ def replay():
         # Simple conditions to rerun the program
         if user.upper() == "Y":
             main()
+        # Exit condition
         elif user.upper() == "N":
             print("See you next time!")
             print("Click Game Screen to Exit")
