@@ -57,6 +57,7 @@ def replay():
     
     # A post test loop used to replay game, variable user is the test condition
     user = ""
+    screen = turtle.Screen()
     while user.upper() not in ["Y","N"]:
 
         print("Would you like to play again?")
@@ -66,7 +67,9 @@ def replay():
             main()
         elif user.upper() == "N":
             print("See you next time!")
-            break
+            print("Click Game Screen to Exit")
+            screen.exitonclick()
+            continue
         else: 
             print("Sorry I didn't understand that. Enter 'N' to quit\n")
 
@@ -103,9 +106,9 @@ def main():
         user.shape("turtle")
         user.color("green")
 
-        # Round 1 Game imported from questions
-        # Example of returning function value to break loop, if necessary
-        # Global settings for post test condition difficult due to import
+        #Round 1 Game imported from questions
+        #Example of returning function value to break loop, if necessary
+        #Global settings for post test condition difficult due to import
         if MultiChoice() == "gameover":
             break
         # Moves the turtle object (the player avatar)
@@ -178,14 +181,12 @@ def main():
         user.forward(360)
         user.left(90)
         user.forward(900)
-        # break
-    
-        # Exits the game and calls replay function
-        print("Click Game Screen to Exit")
-        screen.exitonclick
-        user.clear
+        
+        #Call replay function
+        replay() 
 
-    replay() 
+        #Exit the game
+        break           
 
 # main function driver
 main()
