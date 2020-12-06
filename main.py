@@ -106,63 +106,63 @@ def main():
         # Round 1 Game imported from questions
         # Example of returning function value to break loop, if necessary
         # Global settings for post test condition difficult due to import
-        # if MultiChoice() == "gameover":
-        #     break
-        # # Moves the turtle object (the player avatar)
-        # user.forward(275)
-        # user.shapesize(2,2,1)
-        # print()
+        if MultiChoice() == "gameover":
+            break
+        # Moves the turtle object (the player avatar)
+        user.forward(275)
+        user.shapesize(2,2,1)
+        print()
 
-        # # Round 2
-        # if RPS() == "gameover":
-        #     break
-        # user.forward(275)
-        # user.shapesize(3,3,1)
-        # print()
+        # Round 2
+        if RPS() == "gameover":
+            break
+        user.forward(275)
+        user.shapesize(3,3,1)
+        print()
         
-        # # Round 3
-        # if MultiChoice() == "gameover":
-        #     break
-        # user.right(85)
-        # user.forward(190)
-        # user.right(95)
-        # user.shapesize(4,4,1)
-        # print()
+        # Round 3
+        if MultiChoice() == "gameover":
+            break
+        user.right(85)
+        user.forward(190)
+        user.right(95)
+        user.shapesize(4,4,1)
+        print()
 
-        # # Round 4
-        # if DiceRoll() == "gameover":
-        #     break
-        # user.forward(275)
-        # user.shapesize(5,5,1)
-        # print()
+        # Round 4
+        if DiceRoll() == "gameover":
+            break
+        user.forward(275)
+        user.shapesize(5,5,1)
+        print()
 
-        # # Round 5
-        # print("\nBONUS QUESTION")
-        # if MultiChoice() == "gameover":
-        #     break
-        # print("Congrats you move two squares!")
-        # user.forward(270)
-        # user.shapesize(6,6,1)
+        # Round 5
+        print("\nBONUS QUESTION")
+        if MultiChoice() == "gameover":
+            break
+        print("Congrats you move two squares!")
+        user.forward(270)
+        user.shapesize(6,6,1)
 
-        # user.left(80)
-        # user.forward(190)
-        # user.left(100)
-        # user.shapesize(7,7,1)
-        # print()
+        user.left(80)
+        user.forward(190)
+        user.left(100)
+        user.shapesize(7,7,1)
+        print()
 
-        # # Round 6
-        # if Coinflip() == "gameover":
-        #     break
-        # user.forward(270)
-        # user.shapesize(8,8,1)
-        # print()
+        # Round 6
+        if Coinflip() == "gameover":
+            break
+        user.forward(270)
+        user.shapesize(8,8,1)
+        print()
         
-        # # Round 7
-        # if MultiChoice() == "gameover":
-        #     break
-        # user.forward(270)
-        # user.shapesize(9,9,1)
-        # print()
+        # Round 7
+        if MultiChoice() == "gameover":
+            break
+        user.forward(270)
+        user.shapesize(9,9,1)
+        print()
 
         # Congratulates player through message and on turtle window
         print("\nCongrats Master", Guest, ", you have beaten the game!")
@@ -185,7 +185,7 @@ def main():
         screen.exitonclick
         user.clear
 
-        replay() 
+    replay() 
 
 # main function driver
 main()
