@@ -34,6 +34,8 @@ def RPS():
       print("Computer's choice", Computer)
 
       #Compare the values
+
+      #Define no winner when Computer and user choose same value
       winner = None
 
       #When Computer select Rock
